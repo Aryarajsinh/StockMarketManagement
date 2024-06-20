@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.34729.46
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarketManagement", "StockMarketManagement\StockMarketManagement.csproj", "{F9A38E0A-6CFF-4BCE-9A82-44D387BC6E2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarketManagement.Helper", "StockMarketManagement.Helper\StockMarketManagement.Helper.csproj", "{64DEC2C0-DDCA-4327-A26C-A3CEAB230369}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarketManagement.Repository", "StockMarketManagement.Repository\StockMarketManagement.Repository.csproj", "{96577DD5-DEA1-423D-A361-115C0BFF18C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarketManagement.Models", "StockMarketManagement.Models\StockMarketManagement.Models.csproj", "{74CB228C-2236-49EC-9CBE-5E118AB1F8A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockMarketManagement.Api", "StockMarketManagement.Api\StockMarketManagement.Api.csproj", "{16C58E75-B0A9-4C27-B27A-C49AB2582FDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9A38E0A-6CFF-4BCE-9A82-44D387BC6E2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9A38E0A-6CFF-4BCE-9A82-44D387BC6E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9A38E0A-6CFF-4BCE-9A82-44D387BC6E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9A38E0A-6CFF-4BCE-9A82-44D387BC6E2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64DEC2C0-DDCA-4327-A26C-A3CEAB230369}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64DEC2C0-DDCA-4327-A26C-A3CEAB230369}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64DEC2C0-DDCA-4327-A26C-A3CEAB230369}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64DEC2C0-DDCA-4327-A26C-A3CEAB230369}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96577DD5-DEA1-423D-A361-115C0BFF18C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96577DD5-DEA1-423D-A361-115C0BFF18C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96577DD5-DEA1-423D-A361-115C0BFF18C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96577DD5-DEA1-423D-A361-115C0BFF18C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74CB228C-2236-49EC-9CBE-5E118AB1F8A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74CB228C-2236-49EC-9CBE-5E118AB1F8A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74CB228C-2236-49EC-9CBE-5E118AB1F8A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74CB228C-2236-49EC-9CBE-5E118AB1F8A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16C58E75-B0A9-4C27-B27A-C49AB2582FDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16C58E75-B0A9-4C27-B27A-C49AB2582FDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16C58E75-B0A9-4C27-B27A-C49AB2582FDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16C58E75-B0A9-4C27-B27A-C49AB2582FDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4344DAD5-6BB7-4891-9475-E98841F1A33C}
+	EndGlobalSection
+EndGlobal

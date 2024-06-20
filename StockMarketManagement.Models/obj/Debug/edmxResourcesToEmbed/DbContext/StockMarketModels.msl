@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StockMarketModelStoreContainer" CdmEntityContainer="StockMarketEntities">
+    <EntitySetMapping Name="EQUITY_L">
+      <EntityTypeMapping TypeName="StockMarketModel.EQUITY_L">
+        <MappingFragment StoreEntitySet="EQUITY_L">
+          <ScalarProperty Name="SYMBOL" ColumnName="SYMBOL" />
+          <ScalarProperty Name="NAME_OF_COMPANY" ColumnName="NAME_OF_COMPANY" />
+          <ScalarProperty Name="C_SERIES" ColumnName=" SERIES" />
+          <ScalarProperty Name="C_PAID_UP_VALUE" ColumnName=" PAID_UP_VALUE" />
+          <ScalarProperty Name="C_MARKET_LOT" ColumnName=" MARKET_LOT" />
+          <ScalarProperty Name="C_ISIN_NUMBER" ColumnName=" ISIN_NUMBER" />
+          <ScalarProperty Name="C_FACE_VALUE" ColumnName=" FACE_VALUE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

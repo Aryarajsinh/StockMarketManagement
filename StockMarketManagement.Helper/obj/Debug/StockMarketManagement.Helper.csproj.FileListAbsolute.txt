@@ -1,0 +1,11 @@
+C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Helper\bin\Debug\StockMarketManagement.Helper.dll.config
+C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Helper\bin\Debug\StockMarketManagement.Helper.dll
+C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Helper\bin\Debug\StockMarketManagement.Helper.pdb
+C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Helper\bin\Debug\EntityFramework.dll
+C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Helper\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Helper\bin\Debug\EntityFramework.xml
+C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Helper\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Helper\obj\Debug\StockMarketManagement.Helper.csproj.CoreCompileInputs.cache
+C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Helper\obj\Debug\StockMarketManagement.Helper.csproj.CopyComplete
+C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Helper\obj\Debug\StockMarketManagement.Helper.dll
+C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Helper\obj\Debug\StockMarketManagement.Helper.pdb

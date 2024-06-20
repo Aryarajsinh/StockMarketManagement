@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StockMarketModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="EQUITY_L">
+    <Key>
+      <PropertyRef Name="SYMBOL" />
+    </Key>
+    <Property Name="SYMBOL" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="NAME_OF_COMPANY" Type="varchar" MaxLength="500" />
+    <Property Name=" SERIES" Type="varchar" MaxLength="50" />
+    <Property Name=" PAID_UP_VALUE" Type="int" />
+    <Property Name=" MARKET_LOT" Type="int" />
+    <Property Name=" ISIN_NUMBER" Type="varchar" MaxLength="50" />
+    <Property Name=" FACE_VALUE" Type="int" />
+  </EntityType>
+  <EntityContainer Name="StockMarketModelStoreContainer">
+    <EntitySet Name="EQUITY_L" EntityType="Self.EQUITY_L" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
