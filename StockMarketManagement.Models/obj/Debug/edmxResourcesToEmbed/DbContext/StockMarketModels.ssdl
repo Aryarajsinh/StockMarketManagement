@@ -12,7 +12,44 @@
     <Property Name=" ISIN_NUMBER" Type="varchar" MaxLength="50" />
     <Property Name=" FACE_VALUE" Type="int" />
   </EntityType>
+  <EntityType Name="UserStockList">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Userid" Type="int" />
+    <Property Name="Stocks" Type="varchar" MaxLength="100" />
+    <Property Name="Quntity" Type="int" />
+    <Property Name="BuyingPrice" Type="decimal" Precision="6" Scale="2" />
+  </EntityType>
+  <EntityType Name="UserTable">
+    <Key>
+      <PropertyRef Name="Userid" />
+    </Key>
+    <Property Name="Userid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="100" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Password" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <Association Name="FK__UserStock__Useri__47DBAE45">
+    <End Role="UserTable" Type="Self.UserTable" Multiplicity="0..1" />
+    <End Role="UserStockList" Type="Self.UserStockList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserTable">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="UserStockList">
+        <PropertyRef Name="Userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="StockMarketModelStoreContainer">
     <EntitySet Name="EQUITY_L" EntityType="Self.EQUITY_L" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserStockList" EntityType="Self.UserStockList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserTable" EntityType="Self.UserTable" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__UserStock__Useri__47DBAE45" Association="Self.FK__UserStock__Useri__47DBAE45">
+      <End Role="UserTable" EntitySet="UserTable" />
+      <End Role="UserStockList" EntitySet="UserStockList" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

@@ -1,5 +1,3 @@
-C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Repository\obj\Debug\StockMarketManagement.Repository.csproj.AssemblyReference.cache
-C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Repository\obj\Debug\StockMarketManagement.Repository.csproj.CoreCompileInputs.cache
 C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Repository\bin\Debug\StockMarketManagement.Repository.dll.config
 C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Repository\bin\Debug\StockMarketManagement.Repository.dll
 C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Repository\bin\Debug\StockMarketManagement.Repository.pdb
@@ -10,6 +8,8 @@ C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Reposit
 C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Repository\bin\Debug\StockMarketManagement.Models.dll.config
 C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Repository\bin\Debug\EntityFramework.xml
 C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Repository\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Repository\obj\Debug\StockMarketManagement.Repository.csproj.AssemblyReference.cache
+C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Repository\obj\Debug\StockMarketManagement.Repository.csproj.CoreCompileInputs.cache
 C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Repository\obj\Debug\StockMarketManagement.Repository.csproj.CopyComplete
 C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Repository\obj\Debug\StockMarketManagement.Repository.dll
 C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Repository\obj\Debug\StockMarketManagement.Repository.pdb

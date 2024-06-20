@@ -1,0 +1,51 @@
+﻿@model StockMarketManagement.Models.ViewModel.EQUITYModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container mt-5">
+        <form method="post" class="row">
+            <div class="col-md-6 offset-md-3">
+              
+                <div class="mb-3">
+                    <select class="form-select" aria-label="Default select example" name="SYMBOL">
+                        <option selected>Select Your Stock</option>
+                        @if (ViewBag.list != null)
+                        {
+                            foreach (var item in ViewBag.list)
+                            {
+                                <option value="@item.SYMBOL">@item.SYMBOL</option>
+                            }
+                        }
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="inputField" class="form-label">Enter Quntity</label>
+                    <input type="number" class="form-control" name="Quntity" placeholder="Enter Your Counity">
+                </div>
+                <div class="mb-3">
+                    <label for="inputField" class="form-label">Buying Price</label>
+                    <input type="number" class="form-control" name="BuyingPrice" step="0.01" placeholder="Enter Your Buying Price">
+                </div>
+                <div class="mx-auto">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+            </div>
+           
+        </form>
+    </div>
+
+    <!-- Bootstrap JS Bundle (optional) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+

@@ -6,6 +6,9 @@
     <edmx:Diagrams>
       <Diagram DiagramId="6f51dd16af2249b88fc60768ce9350f3" Name="Diagram1">
         <EntityTypeShape EntityType="StockMarketModel.EQUITY_L" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="StockMarketModel.UserTable" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="StockMarketModel.UserStockList" Width="1.5" PointX="5.625" PointY="4.625" />
+        <AssociationConnector Association="StockMarketModel.FK__UserStock__Useri__47DBAE45" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

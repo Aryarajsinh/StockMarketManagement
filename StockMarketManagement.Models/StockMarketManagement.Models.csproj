@@ -71,8 +71,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StockMarketModels.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DbContext\UserStockList.cs">
+      <DependentUpon>StockMarketModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DbContext\UserTable.cs">
+      <DependentUpon>StockMarketModels.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModel\EQUITYModel.cs" />
+    <Compile Include="ViewModel\LoginModel.cs" />
+    <Compile Include="ViewModel\StockDetails.cs" />
+    <Compile Include="ViewModel\UserModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />

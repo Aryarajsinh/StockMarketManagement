@@ -82,8 +82,8 @@ C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Api\bin
 C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Api\bin\System.Web.WebPages.Razor.xml
 C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Api\bin\Antlr3.Runtime.pdb
 C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Api\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Api\obj\Debug\StockMarketManagement.Api.csproj.AssemblyReference.cache
 C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Api\obj\Debug\StockMarketManagement.Api.csproj.CoreCompileInputs.cache
 C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Api\obj\Debug\StockMarketManagement.Api.csproj.CopyComplete
 C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Api\obj\Debug\StockMarketManagement.Api.dll
 C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Api\obj\Debug\StockMarketManagement.Api.pdb
-C:\Users\sit406\source\repos\StockMarketManagement\StockMarketManagement.Api\obj\Debug\StockMarketManagement.Api.csproj.AssemblyReference.cache

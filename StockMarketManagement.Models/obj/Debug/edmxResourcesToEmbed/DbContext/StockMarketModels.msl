@@ -14,5 +14,26 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="UserTable">
+      <EntityTypeMapping TypeName="StockMarketModel.UserTable">
+        <MappingFragment StoreEntitySet="UserTable">
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserStockList">
+      <EntityTypeMapping TypeName="StockMarketModel.UserStockList">
+        <MappingFragment StoreEntitySet="UserStockList">
+          <ScalarProperty Name="BuyingPrice" ColumnName="BuyingPrice" />
+          <ScalarProperty Name="Quntity" ColumnName="Quntity" />
+          <ScalarProperty Name="Stocks" ColumnName="Stocks" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

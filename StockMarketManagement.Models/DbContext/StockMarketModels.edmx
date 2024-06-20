@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="StockMarketModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="StockMarketModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="EQUITY_L">
           <Key>
             <PropertyRef Name="SYMBOL" />
@@ -17,11 +17,47 @@
           <Property Name=" ISIN_NUMBER" Type="varchar" MaxLength="50" />
           <Property Name=" FACE_VALUE" Type="int" />
         </EntityType>
+        <EntityType Name="UserStockList">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Userid" Type="int" />
+          <Property Name="Stocks" Type="varchar" MaxLength="100" />
+          <Property Name="Quntity" Type="int" />
+          <Property Name="BuyingPrice" Type="decimal" Precision="6" Scale="2" />
+        </EntityType>
+        <EntityType Name="UserTable">
+          <Key>
+            <PropertyRef Name="Userid" />
+          </Key>
+          <Property Name="Userid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="100" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="Password" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <Association Name="FK__UserStock__Useri__47DBAE45">
+          <End Role="UserTable" Type="Self.UserTable" Multiplicity="0..1" />
+          <End Role="UserStockList" Type="Self.UserStockList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserTable">
+              <PropertyRef Name="Userid" />
+            </Principal>
+            <Dependent Role="UserStockList">
+              <PropertyRef Name="Userid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="StockMarketModelStoreContainer">
           <EntitySet Name="EQUITY_L" EntityType="Self.EQUITY_L" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserStockList" EntityType="Self.UserStockList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserTable" EntityType="Self.UserTable" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__UserStock__Useri__47DBAE45" Association="Self.FK__UserStock__Useri__47DBAE45">
+            <End Role="UserTable" EntitySet="UserTable" />
+            <End Role="UserStockList" EntitySet="UserStockList" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="StockMarketModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -39,7 +75,46 @@
         </EntityType>
         <EntityContainer Name="StockMarketEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="EQUITY_L" EntityType="Self.EQUITY_L" />
+          <EntitySet Name="UserTable" EntityType="StockMarketModel.UserTable" />
+          <EntitySet Name="UserStockList" EntityType="StockMarketModel.UserStockList" />
+          <AssociationSet Name="FK__UserStock__Useri__47DBAE45" Association="StockMarketModel.FK__UserStock__Useri__47DBAE45">
+            <End Role="UserTable" EntitySet="UserTable" />
+            <End Role="UserStockList" EntitySet="UserStockList" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="UserTable">
+          <Key>
+            <PropertyRef Name="Userid" />
+          </Key>
+          <Property Name="Userid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="UserStockList" Relationship="StockMarketModel.FK__UserStock__Useri__47DBAE45" FromRole="UserTable" ToRole="UserStockList" />
+        </EntityType>
+        <EntityType Name="UserStockList">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Userid" Type="Int32" />
+          <Property Name="Stocks" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Quntity" Type="Int32" />
+          <Property Name="BuyingPrice" Type="Decimal" Precision="6" Scale="2" />
+          <NavigationProperty Name="UserTable" Relationship="StockMarketModel.FK__UserStock__Useri__47DBAE45" FromRole="UserStockList" ToRole="UserTable" />
+        </EntityType>
+        <Association Name="FK__UserStock__Useri__47DBAE45">
+          <End Type="StockMarketModel.UserTable" Role="UserTable" Multiplicity="0..1" />
+          <End Type="StockMarketModel.UserStockList" Role="UserStockList" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserTable">
+              <PropertyRef Name="Userid" />
+            </Principal>
+            <Dependent Role="UserStockList">
+              <PropertyRef Name="Userid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -56,6 +131,27 @@
                 <ScalarProperty Name="C_MARKET_LOT" ColumnName=" MARKET_LOT" />
                 <ScalarProperty Name="C_ISIN_NUMBER" ColumnName=" ISIN_NUMBER" />
                 <ScalarProperty Name="C_FACE_VALUE" ColumnName=" FACE_VALUE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserTable">
+            <EntityTypeMapping TypeName="StockMarketModel.UserTable">
+              <MappingFragment StoreEntitySet="UserTable">
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Userid" ColumnName="Userid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserStockList">
+            <EntityTypeMapping TypeName="StockMarketModel.UserStockList">
+              <MappingFragment StoreEntitySet="UserStockList">
+                <ScalarProperty Name="BuyingPrice" ColumnName="BuyingPrice" />
+                <ScalarProperty Name="Quntity" ColumnName="Quntity" />
+                <ScalarProperty Name="Stocks" ColumnName="Stocks" />
+                <ScalarProperty Name="Userid" ColumnName="Userid" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

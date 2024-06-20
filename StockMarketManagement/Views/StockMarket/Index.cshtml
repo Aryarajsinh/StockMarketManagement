@@ -1,7 +1,124 @@
-﻿
+﻿@*@model StockMarketManagement.Models.ViewModel.StockDetails
+
+    @{
+        ViewBag.Title = "Index";
+    }
+
+    <h2>Index</h2>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SYMBOL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.open)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.high)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.low)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.volume)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.previous_close)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.change)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.change_percent)
+            </th>
+
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.SYMBOL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.open)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.high)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.low)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.volume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.previous_close)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.change)
+            </td><td>
+                @Html.DisplayFor(modelItem => modelItem.change_percent)
+            </td>
+
+
+
+        </tr>
+
+
+    </table>*@
+
+
+@model List<StockMarketManagement.Models.ViewModel.StockDetails>
+
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutDashboard.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Stock Details</h2>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-striped">
+        <thead>
+            <tr>
+                @*<th>@Html.DisplayNameFor(model => model.SYMBOL)</th>
+                <th>@Html.DisplayNameFor(model => model.price)</th>
+                <th>@Html.DisplayNameFor(model => model.BuyingPrice)</th>
+                <th>@Html.DisplayNameFor(model => model.Quntity)</th>*@
+                @*<th>@Html.DisplayNameFor(model => model.TotalProfit)</th>*@
+            <th>SYMBOL</th>
+            <th>price</th>
+            <th>BuyingPrice</th>
+            <th>Quntity</th>
+                <th>TotalProfit</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.SYMBOL)</td>
+                    <td>@Html.DisplayFor(modelItem => item.price)</td>
+                    <td>@Html.DisplayFor(modelItem => item.BuyingPrice)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Quntity)</td>
+
+                    <td>@((item.price* item.Quntity)-(item.BuyingPrice * item.Quntity))</td>
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
 

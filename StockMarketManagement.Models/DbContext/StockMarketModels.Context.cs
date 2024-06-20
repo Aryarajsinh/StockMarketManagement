@@ -26,5 +26,7 @@ namespace StockMarketManagement.Models.DbContext
         }
     
         public virtual DbSet<EQUITY_L> EQUITY_L { get; set; }
+        public virtual DbSet<UserTable> UserTable { get; set; }
+        public virtual DbSet<UserStockList> UserStockList { get; set; }
     }
 }
